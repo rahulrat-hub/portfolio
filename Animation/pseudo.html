@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+      }
+
+      button {
+        height: 60px;
+        width: 160px;
+        position: relative;
+        z-index: 1;
+        
+      }
+
+      button::before {
+        content: "";
+        background-color: coral;
+        height: 100%;
+        width:0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: 0.5s ease-in;
+          
+      }
+
+      button:hover::before{
+        width: 50%;
+        
+        }
+
+      button:hover {
+        color: red;
+        /* border-radius: 2rem; */
+      }
+
+      button::after{
+        content: '';
+        background-color: coral;
+        height: 100%;
+        width: 0% ;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        transition: 0.5s ease-in;
+      }
+
+      button:hover::after{
+ 
+ width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button>Click Here</button>
+    </div>
+  </body>
+</html>
